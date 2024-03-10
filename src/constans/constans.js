@@ -2,7 +2,7 @@ export const HOME_ROUTE = '/';
 export const CATALOG_ROUTE = '/catalog';
 export const FAVORITES_ROUTE = '/favorites';
 export const BASE_URL = 'https://65e89b0e4bb72f0a9c4fe74e.mockapi.io/api/v1';
-export const makes = [
+export const CAR = [
   'Buick',
   'Volvo',
   'HUMMER',
@@ -26,8 +26,7 @@ export const makes = [
   'Kia',
   'Land',
 ];
-
-export const priceHours = [
+export const PRICE_HOURS = [
   '30',
   '40',
   '50',

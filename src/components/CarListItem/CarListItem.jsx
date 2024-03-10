@@ -10,6 +10,7 @@ import {
 import { replaceLastFourWords } from '../../helpers/replaceLastFourWords';
 import defaultImg from '../../assets/img/defaultImg.jpg';
 import css from './CarListItem.module.css';
+import { toastWarn, toastSuccess } from '../../helpers/toast';
 
 export const CarListItem = ({ car }) => {
   const dispatch = useDispatch();
@@ -37,6 +38,9 @@ export const CarListItem = ({ car }) => {
 
   const handleFavoriteClick = () => {
     dispatch(isFavorite ? deleteFavorite(car) : addFavorite(car));
+    !isFavorite
+      ? toastSuccess('The car has been successfully added to favorites.')
+      : toastWarn('The car has been successfully deleted from favorites.');
   };
 
   return (

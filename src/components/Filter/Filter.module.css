@@ -1,0 +1,107 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 18px;
+  align-items: end;
+  margin-bottom: 50px;
+}
+
+
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.brandWrapper {
+  width: 224px;
+}
+
+.priceWrapper {
+  width: 125px;
+}
+
+label  {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 8px;
+  color: #8a8a89;
+}
+
+select {
+  padding: 14px 18px;
+  appearance: none;
+  cursor: pointer;
+}
+
+select {
+  background-color: #f7f7fb;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+}
+
+.sbmtBtn,
+.restBtn {
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.41;
+  min-width: 136px;
+  padding: 10px 44px;
+  background-color: #3470ff;
+  color: #fff;
+}
+
+.restBtn[disabled] {
+  opacity: 0.5;
+}
+
+.sbmtBtn, .restBtn{
+  transition: background-color 250ms cubic-bezier(0, .91, 1, .56)
+}
+
+.sbmtBtn:hover,
+.sbmtBtn:focus {
+  background-color: #0b44cd;
+}
+
+option {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: rgba(18, 20, 23, 0.2);
+}
+
+select::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 8px;
+  height: 130px;
+  
+}
+
+select::-webkit-scrollbar-thumb {
+  background-color: rgba(18, 20, 23, 0.05);
+  border-radius: 6px;
+}
+
+.iconChevron {
+  position: absolute;
+  bottom: 14px;
+  right: 18px;
+  pointer-events: none;
+  stroke: black;
+  fill: transparent;
+  width: 20px;
+  height: 20px;
+  transition: transform 250ms cubic-bezier(0, .91, 1, .56);
+}
+

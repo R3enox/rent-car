@@ -1,11 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { CarList } from '../../components/CarList/CarList';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { fetchAdvertsThunk } from '../../redux/adverts/advertsThunk';
-import { selectCars } from '../../redux/adverts/advertsSelectors';
 import { LoadMore } from '../../components/Btn/LoadMore';
+import { Filter } from '../../components/Filter/Filter';
+import { selectCars } from '../../redux/adverts/advertsSelectors';
 import css from './CatalogPage.module.css';
+
 const CatalogPage = () => {
+  const [filteredCars, setFilteredCars] = useState(null);
   const cars = useSelector(selectCars);
   const dispatch = useDispatch();
   const carsLeng = cars.length > 0;
@@ -17,7 +20,9 @@ const CatalogPage = () => {
 
   return (
     <section className={css.container}>
-      <CarList cars={cars} />
+      <Filter setFilterCars={setFilteredCars} />
+      <CarList cars={filteredCars ? filteredCars : cars} />
+
       {cars.length > 0 && cars.length % 12 === 0 && <LoadMore />}
     </section>
   );

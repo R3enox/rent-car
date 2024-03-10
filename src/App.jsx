@@ -27,7 +27,7 @@ const appRoutes = [
 function App() {
   return (
     <SharedLayout>
-      <Suspense fallback={null}>
+      <Suspense>
         <Routes>
           {appRoutes.map(({ path, element }) => (
             <Route key={path} path={path} element={element} />

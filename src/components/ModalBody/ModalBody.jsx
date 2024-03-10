@@ -116,10 +116,11 @@ export const ModalBody = () => {
           </li>
         </div>
       </ul>
-
-      <button className={css.linkTel} href="tel:+380730000000">
-        Rental car
-      </button>
+      <div className={css.linkTelWrapper}>
+        <a className={css.linkTel} href="tel:+380730000000">
+          Rental car
+        </a>
+      </div>
     </div>
   );
 };
