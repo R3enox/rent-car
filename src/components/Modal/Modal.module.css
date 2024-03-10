@@ -1,0 +1,32 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(18, 20, 23, 0.5);
+}
+
+.backdrop:hover {
+  cursor: pointer;
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
+  max-width: 541px;
+  width: 100%;
+  min-height: 752px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal:hover {
+  cursor: auto;
+}
+
+
+

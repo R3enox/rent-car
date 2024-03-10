@@ -1,0 +1,11 @@
+.footer {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #485024;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 999;
+}

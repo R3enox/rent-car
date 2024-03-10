@@ -1,0 +1,133 @@
+.imgModal {
+    height: 248px;
+    width: 100%;
+    border-radius: 14px;
+    margin-bottom: 14px;
+}
+
+.titleModal {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #121417;
+    margin-bottom: 8px;
+}
+
+.blueClr {
+    color: #3470ff;
+}
+
+.listModal{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgba(18, 20, 23, 0.5);
+    margin-bottom: 14px;
+}
+
+.topWrapper {
+    display: flex;
+    column-gap: 6px;
+    margin-bottom: 5px;
+}
+
+.botWrapper {
+    display: flex;
+    column-gap: 6px;
+}
+
+.liItem {
+    border-right: none;
+}
+
+.liItem:not(:nth-child(5n)):not(:nth-child(7n)) {
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
+    padding-right: 6px;
+}
+
+.titleDesc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #121417;
+    margin-bottom: 24px;
+}
+
+.titleAcess {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #121417;
+    margin-bottom: 8px;
+}
+
+.listAcess {
+    display: flex;
+    column-gap: 6px;
+    font-size: 12px;
+    line-height: 150%;
+    color: rgba(18, 20, 23, 0.5);
+    margin-bottom: 4px;
+}
+
+.listFunct {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    font-size: 12px;
+    line-height: 150%;
+    color: rgba(18, 20, 23, 0.5);
+    margin-bottom: 24px;
+}
+
+.listCon{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.condition {
+    display: flex;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #363535;
+    background-color: #f9f9f9;
+    border-radius: 35px;
+    padding: 7px 14px;
+}
+
+.blueDesc {
+    font-weight: 600;
+    color: #3470ff;
+}
+
+.upper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+    margin-bottom: 8px;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+}
+
+.linkTel{ 
+    margin-top: 24px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 50px;
+    background-color: #3470ff;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.43;
+    color: #fff;
+    transition: background-color 250ms cubic-bezier(0, .91, 1, .56)
+}
+
+.linkTel:hover {
+    background-color: #0b44cd;
+}

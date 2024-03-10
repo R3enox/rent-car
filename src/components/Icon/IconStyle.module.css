@@ -1,0 +1,19 @@
+.cross {
+  width: 24px;
+  height: 24px;
+  stroke: black;
+}
+
+.isFavHeart {
+  width: 18px;
+  height: 18px;
+  fill: rgba(52, 112, 255, 1);
+  stroke: rgba(52, 112, 255, 1)
+}
+
+.isNotFavHeart {
+width: 18px;
+height: 18px;
+fill: transparent;
+stroke: white;
+}

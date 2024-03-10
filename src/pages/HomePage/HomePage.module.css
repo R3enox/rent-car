@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 86vh;
+    padding: 50px 129px;
+    margin: 0 auto;
+}
+
+.bgImg{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    border-radius: 14px;
+    background-image: url('../../assets/img/homeCar.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.mainTitle {
+    font-weight: 600;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin: 50px 0;
+}
+
+.listHome {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    list-style: circle;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,11 @@
+.container {
+  width: 1440px;
+  padding: 50px 129px;
+  margin: 0 auto;
+}
+
+.desc{
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+}
