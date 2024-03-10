@@ -6,7 +6,6 @@ import { FavoriteTittle } from '../../components/FavoriteTitle/FavoriteTitle';
 
 const FavoritesPage = () => {
   const favoritesCars = useSelector(selectFavoritesCars);
-  console.log(favoritesCars.length);
   return (
     <section className={css.container}>
       <FavoriteTittle />

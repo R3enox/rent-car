@@ -4,7 +4,7 @@ import SharedLayout from 'components/SharedLayout/SharedLayout';
 import * as ROUTES from './constans/constans';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage.jsx'));
-const CatalogPage = lazy(() => import('pages//CatalogPage/CatalogPage.jsx'));
+const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage.jsx'));
 const FavoritesPage = lazy(() =>
   import('pages/FavoritesPage/FavoritesPage.jsx')
 );

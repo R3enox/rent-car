@@ -1,4 +1,3 @@
-// Модальне вікно повинно закриватись по кліку на кнопку у вигляді “хрестика”, по кліку на backdrop або натисканню на клавішу Esc.
 import { useDispatch } from 'react-redux';
 import { useEffect, useCallback } from 'react';
 import { closeModal } from '../../redux/modal/modalSlice';
