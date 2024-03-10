@@ -10,7 +10,6 @@ export const LoadMore = () => {
 
   const loadMorePhotos = async () => {
     await setPage(page + 1);
-    console.log(page);
     await dispatch(fetchAdvertsThunk(page));
     toastSuccess('We found 12 more cars for you.');
   };
