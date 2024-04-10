@@ -1,11 +1,9 @@
-import { useSelector } from 'react-redux';
-import { selectModalData } from '../../redux/modal/modalSelectors';
 import { addCommaToMileage } from '../../helpers/addCommaToMileage';
 import { reversePrice } from '../../helpers/reversePrice';
 import defaultImg from '../../assets/img/defaultImg.jpg';
 import css from './ModalBody.module.css';
 
-export const ModalBody = () => {
+export const ModalBody = ({ car }) => {
   const {
     id,
     year,
@@ -22,7 +20,7 @@ export const ModalBody = () => {
     rentalConditions,
     mileage,
     rentalPrice,
-  } = useSelector(selectModalData);
+  } = car;
 
   const addressParts = address.split(',');
   const city = addressParts[1].trim();

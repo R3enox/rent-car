@@ -4,7 +4,18 @@ export const addCommaToMileage = (mileage) => {
   }
   mileage = mileage.toString();
 
-  const commaIdx = mileage.length <= 4 ? 1 : 2;
+  const length = mileage.length;
+  let commaIdx;
 
-  return mileage.slice(0, commaIdx) + ',' + mileage.slice(commaIdx);
+  if (length <= 4) {
+    commaIdx = 1;
+  } else if (length === 5) {
+    commaIdx = 2;
+  } else if (length === 6) {
+    commaIdx = 3;
+  } else {
+    return mileage;
+  }
+
+  return mileage.substring(0, commaIdx) + ',' + mileage.substring(commaIdx);
 };

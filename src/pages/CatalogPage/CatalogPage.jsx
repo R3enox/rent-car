@@ -9,6 +9,7 @@ import css from './CatalogPage.module.css';
 
 const CatalogPage = () => {
   const [filteredCars, setFilteredCars] = useState(null);
+  const [loadMoer, setLoadMore] = useState(true);
   const cars = useSelector(selectCars);
   const dispatch = useDispatch();
   const carsLeng = cars.length > 0;
@@ -20,10 +21,9 @@ const CatalogPage = () => {
 
   return (
     <section className={css.container}>
-      <Filter setFilterCars={setFilteredCars} />
+      <Filter setFilterCars={setFilteredCars} setLoadMore={setLoadMore} />
       <CarList cars={filteredCars ? filteredCars : cars} />
-
-      {cars.length > 0 && cars.length % 12 === 0 && <LoadMore />}
+      {loadMoer && <LoadMore />}
     </section>
   );
 };

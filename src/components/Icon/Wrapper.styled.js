@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  .iconChevron {
+  .btnWrapper {
     position: absolute;
     bottom: 14px;
     right: 18px;
+  }
+  .iconChevron {
     pointer-events: none;
     stroke: black;
     fill: transparent;

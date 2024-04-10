@@ -7,7 +7,7 @@ import css from './Filter.module.css';
 import { IconChevronBrand, IconChevronPrice } from '../Icon/IconChevron';
 import { toastSuccess } from '../../helpers/toast';
 
-export const Filter = ({ setFilterCars }) => {
+export const Filter = ({ setFilterCars, setLoadMore }) => {
   const cars = useSelector(selectCars);
   const [brand, setBrand] = useState('');
   const [price, setPrice] = useState('');
@@ -43,12 +43,14 @@ export const Filter = ({ setFilterCars }) => {
       toastSuccess(`This is the ${price} you've been looking for.`);
     }
     setFilterCars(filteredCars);
+    setLoadMore(false);
   };
 
   const handleReset = () => {
     setBrand('');
     setPrice('');
     setFilterCars(cars);
+    setLoadMore(true);
     toastSuccess(`The filter's been cleaned successfully.`);
   };
 

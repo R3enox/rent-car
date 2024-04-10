@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { LearnMore } from '../Btn/LearnMore';
 import { FavoriteBtn } from '../Btn/FavoriteBtn';
-import { openModal } from '../../redux/modal/modalSlice';
 import { selectFavoritesCars } from '../../redux/favorites/favoritesSelectors';
 import {
   addFavorite,
@@ -9,11 +8,15 @@ import {
 } from '../../redux/favorites/favoritesSlice';
 import { replaceLastFourWords } from '../../helpers/replaceLastFourWords';
 import defaultImg from '../../assets/img/defaultImg.jpg';
-import css from './CarListItem.module.css';
 import { toastWarn, toastSuccess } from '../../helpers/toast';
+import { useState } from 'react';
+import css from './CarListItem.module.css';
+import { Modal } from '../Modal/Modal';
+import { ModalBody } from '../ModalBody/ModalBody';
 
 export const CarListItem = ({ car }) => {
   const dispatch = useDispatch();
+  const [isShowModal, setIsShowModal] = useState(false);
   const favoritesCars = useSelector(selectFavoritesCars);
   const {
     id,
@@ -85,8 +88,11 @@ export const CarListItem = ({ car }) => {
             <p>{replaceLastFourWords(firstFunctionalities)}</p>
           </li>
         </ul>
-        <LearnMore openModal={() => dispatch(openModal(car))} />
+        <LearnMore openModal={() => setIsShowModal(true)} />
       </li>
+      {isShowModal && (
+        <Modal body={<ModalBody car={car} />} setIsShowModal={setIsShowModal} />
+      )}
     </>
   );
 };
